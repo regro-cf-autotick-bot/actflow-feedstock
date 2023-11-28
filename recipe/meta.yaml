@@ -1,5 +1,5 @@
 {% set name = "actflow" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/actflow-{{ version }}.tar.gz
-  sha256: 421776e1564d95189722ae8defbd96fb896af3233384ebc81ca0d13d2551414c
+  sha256: 81dad450ca9b75036741a1188321bbcb4edcdedd6226e1163d87bdccf43c6e34
 
 build:
   noarch: python
-  script: 
+  script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
